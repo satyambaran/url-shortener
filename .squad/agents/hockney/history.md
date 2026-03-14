@@ -21,7 +21,14 @@
 
 ## Learnings
 
-(To be updated as work progresses — document test strategies, edge cases discovered, performance baselines, failure modes tested)
+- Drafted a comprehensive test strategy aligning to the canonical architecture SLAs (<100ms p99, 1M writes/day, 99.9% uptime).
+- Created skeleton integration tests using Testcontainers to standardize environment setup (Postgres + Redis).
+- Added k6 load script and Chaos Mesh manifests to validate performance and reliability scenarios.
+- CI workflow (GitHub Actions) runs unit/integration tests on PRs and schedules load tests.
+
+(Will expand with results and observed failure modes as tests are run.)
+
+- 2026-03-14T00:00:00Z: Scribe: Orchestration log added; decisions inbox merged; session kickoff logged.
 
 ---
 

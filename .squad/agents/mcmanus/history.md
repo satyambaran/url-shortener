@@ -20,6 +20,10 @@
 
 (To be updated as work progresses — document code patterns, API design, data layer decisions, performance considerations)
 
+- 2026-03-14: Scaffolded initial multi-module Maven project and bootstrapped the shortener-service module with controllers, services, repositories, DTOs, configuration and unit test skeletons. Redis and PostgreSQL integrations are stubbed; health endpoints and basic exception handling added.
+
+- 2026-03-14T00:00:00Z: Scribe: Orchestration log added; decisions inbox merged; session kickoff logged.
+
 ---
 
 *Updated by Scribe or McManus after each session*
