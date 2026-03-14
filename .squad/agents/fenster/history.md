@@ -41,3 +41,5 @@ Next steps: confirm build artifact name with McManus; ops to populate secrets, p
 - For Redis Premium clustering: prefer shardCount to reflect desired data distribution (we used 6 shards of ~1GB each). Enable persistence (AOF with everysec or RDB snapshots) for durability; validate SKU families/capacities per region before ordering.
 - Documented the above choices in .squad/decisions/inbox/fenster-azure-choices.md for team review.
 
+
+- 2026-03-14T15:22:23Z: Fenster: Created Azure Bicep templates for managed Postgres & Redis; added DEPLOYMENT.md. Status: complete.

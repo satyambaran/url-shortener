@@ -29,3 +29,5 @@
 ---
 
 *Updated by Scribe or McManus after each session*
+
+- 2026-03-14T15:22:23Z: McManus: Updated Spring Boot production profile to bind to Azure managed Postgres and Redis; configured HikariCP (minIdle=5,max=20) and Redis pooling (2s timeout,max_retries=3); pinned pom versions. Status: complete.

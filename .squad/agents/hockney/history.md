@@ -26,6 +26,11 @@
 - Added k6 load script and Chaos Mesh manifests to validate performance and reliability scenarios.
 - CI workflow (GitHub Actions) runs unit/integration tests on PRs and schedules load tests.
 
+- Implemented integration tests that validate HikariCP and Jedis pooling behaviors (startup min, scaling, eviction, exhaustion, timeout and recovery) using ephemeral Testcontainers for PostgreSQL and Redis.
+- Tests shorten production timeouts for practical execution (idle-timeout reduced to 2s in tests) while preserving behavioral assertions; production values remain in application.yml (600s idle timeout).
+- Simulated slow Redis responses via `redis-cli DEBUG SLEEP` inside the container and transient outages by stopping/starting the container to validate retry and recovery behavior.
+- E2E workload runs 1200 concurrent operations that exercise DB + Redis pools, assert no connection leaks, and report latency percentiles (p50/p95/p99).
+
 (Will expand with results and observed failure modes as tests are run.)
 
 - 2026-03-14T00:00:00Z: Scribe: Orchestration log added; decisions inbox merged; session kickoff logged.
