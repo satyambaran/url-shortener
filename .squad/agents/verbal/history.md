@@ -11,7 +11,10 @@
 
 ## Learnings
 
-(To be updated as work progresses — document architecture patterns, design decisions, key constraints)
+- SLA targets: 100M DAU, 1M writes/day, <100ms p99, 99.9% uptime
+- Key architecture decisions: Redis single instance with circuit breaker, PostgreSQL read replicas, <2 KB short codes
+- Design patterns: write-through cache, eventual consistency, circuit breaker
+- Capacity planning: ~500M URLs by year 5, ~1TB storage
 
 ---
 
