@@ -1,0 +1,12 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata:
+  name: redis-kill
+  namespace: default
+spec:
+  action: pod-kill
+  mode: one
+  selector:
+    labelSelectors:
+      app: redis
+  duration: '30s'

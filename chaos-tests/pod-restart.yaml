@@ -1,0 +1,12 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata:
+  name: backend-restart
+  namespace: default
+spec:
+  action: pod-kill
+  mode: fixed
+  selector:
+    labelSelectors:
+      app: backend
+  duration: '15s'

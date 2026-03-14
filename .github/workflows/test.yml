@@ -1,0 +1,41 @@
+name: CI Tests
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build and run tests
+        run: mvn -B -DskipTests=false test
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: target/surefire-reports || test-reports
+
+  nightly-load-test:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install k6
+        run: sudo apt-get update && sudo apt-get install -y k6
+      - name: Run k6 load test
+        run: k6 run k6-load-tests/shortener-load-test.js --out json=test-reports/load-results.json
+      - name: Upload load results
+        uses: actions/upload-artifact@v4
+        with:
+          name: load-results
+          path: test-reports/load-results.json

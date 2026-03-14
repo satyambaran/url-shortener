@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: url-shortener-config
+  namespace: url-shortener
+data:
+  SPRING_PROFILES_ACTIVE: "prod"
+  LOG_LEVEL_ROOT: "INFO"
+  APP_BUCKET: "url-shortener-uploads"
+  CDN_TTL_SECONDS: "300"
+  # Add non-secret application configuration here

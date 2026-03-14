@@ -32,3 +32,12 @@ Next steps: confirm build artifact name with McManus; ops to populate secrets, p
 ---
 
 *Updated by Scribe or Fenster after each session*
+
+## Learnings about Bicep patterns, AKS VNet integration, and Redis clustering decisions
+
+- Bicep modules should accept delegated subnet resource IDs (do not create or modify customer VNets). This reduces permission scope and prevents accidental VNet drift.
+- For managed Postgres Flexible Server: use delegated subnets, enable private network access, enforce SSL, and configure zone high-availability. Enable geo-redundant backups in prod and expose only private FQDNs to AKS.
+- PgBouncer should be deployed inside AKS (Deployment + Service) and configured to cap client connections (we recommend 100). The managed DB template emits a recommended connection value for alignment.
+- For Redis Premium clustering: prefer shardCount to reflect desired data distribution (we used 6 shards of ~1GB each). Enable persistence (AOF with everysec or RDB snapshots) for durability; validate SKU families/capacities per region before ordering.
+- Documented the above choices in .squad/decisions/inbox/fenster-azure-choices.md for team review.
+

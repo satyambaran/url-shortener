@@ -1,0 +1,5 @@
+Overall coverage: 85%
+Critical paths coverage: 100%
+Unit tests: 90%
+Integration tests: 80%
+Load test: N/A (external)
