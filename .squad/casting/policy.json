@@ -1,0 +1,6 @@
+{
+  "universes_allowed": ["The Usual Suspects"],
+  "current_universe": "The Usual Suspects",
+  "max_team_size": 10,
+  "overflow_strategy": "diegetic_expansion"
+}

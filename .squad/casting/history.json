@@ -1,0 +1,12 @@
+{
+  "assignments": [
+    {
+      "assignment_id": "init-001",
+      "timestamp": "2026-03-14T13:26:35Z",
+      "universe": "The Usual Suspects",
+      "team_size": 6,
+      "members": ["Verbal", "McManus", "Fenster", "Hockney", "Scribe", "Ralph"],
+      "context": "URL shortener: Redis, PostgreSQL, Java Spring Boot, Kubernetes on AKS"
+    }
+  ]
+}

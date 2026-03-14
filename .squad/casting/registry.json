@@ -1,0 +1,52 @@
+{
+  "agents": [
+    {
+      "persistent_name": "Verbal",
+      "universe": "The Usual Suspects",
+      "role": "Lead / Architect",
+      "created_at": "2026-03-14T13:26:35Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    {
+      "persistent_name": "McManus",
+      "universe": "The Usual Suspects",
+      "role": "Backend Dev",
+      "created_at": "2026-03-14T13:26:35Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    {
+      "persistent_name": "Fenster",
+      "universe": "The Usual Suspects",
+      "role": "DevOps Engineer",
+      "created_at": "2026-03-14T13:26:35Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    {
+      "persistent_name": "Hockney",
+      "universe": "The Usual Suspects",
+      "role": "QA / Tester",
+      "created_at": "2026-03-14T13:26:35Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    {
+      "persistent_name": "Scribe",
+      "universe": "N/A",
+      "role": "Session Logger",
+      "created_at": "2026-03-14T13:26:35Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    {
+      "persistent_name": "Ralph",
+      "universe": "N/A",
+      "role": "Work Monitor",
+      "created_at": "2026-03-14T13:26:35Z",
+      "legacy_named": false,
+      "status": "active"
+    }
+  ]
+}
