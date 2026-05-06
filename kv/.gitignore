@@ -1,0 +1,13 @@
+.gradle/
+build/
+.idea/
+*.iml
+*.class
+.vscode/
+.kv_data/
+.kv_data_demo/
+.kv_backup_demo/
+.kv_test_data/
+.venv/
+__pycache__/
+*.pyc
